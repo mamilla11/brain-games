@@ -4,3 +4,5 @@ export const askName = () => {
   const username = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${username}!`);
 };
+
+export default askName;
