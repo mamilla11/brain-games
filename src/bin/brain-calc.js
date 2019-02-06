@@ -2,4 +2,4 @@
 
 import playGame from '..';
 
-playGame('brain-even');
+playGame('brain-calc');

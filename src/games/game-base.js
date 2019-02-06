@@ -1,7 +1,25 @@
 import readlineSync from 'readline-sync';
+import { getAnswer, getQuestion } from './game-data';
+
+export const winnerScore = 3;
 
 export const greeting = () => {
   console.log('Welcome to the Brain Games!');
+};
+
+export const showRules = (rules) => {
+  console.log(rules);
+};
+
+export const isCorrectAnswer = (gameData, userAnswer) => {
+  const correctAnswer = getAnswer(gameData);
+  if (userAnswer === correctAnswer) {
+    console.log('Correct!');
+    return true;
+  }
+
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+  return false;
 };
 
 export const askName = () => {
@@ -10,15 +28,11 @@ export const askName = () => {
   return username;
 };
 
-export const askQuestion = (question) => {
-  console.log(`Question: ${question}`);
+export const askQuestion = (gameData) => {
+  console.log(`Question: ${getQuestion(gameData)}`);
 };
 
-export const getAnswer = () => readlineSync.question('Your answer: ');
-
-export const isEven = number => number % 2 === 0;
-
-export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+export const getUserAnswer = () => readlineSync.question('Your answer: ');
 
 export const finishGame = (success, username) => {
   if (success) {
