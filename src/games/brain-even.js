@@ -10,7 +10,7 @@ export default () => {
 
   let isWinner = true;
 
-  for (let i = 0; i < winnerScore; i++) {
+  for (let i = 0; i < winnerScore; i += 1) {
     const question = game.getRandomNumber(1, 1000);
     const even = game.isEven(question);
     const correctAnswer = even ? 'yes' : 'no';
