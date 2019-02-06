@@ -3,7 +3,7 @@ import * as game from './game-base';
 export default () => {
   const winnerScore = 3;
 
-  console.log('Welcome to the Brain Games!');
+  game.greeting();
   console.log('Answer "yes" if number even otherwise answer "no".\n');
 
   const username = game.askName();
