@@ -1,6 +1,6 @@
 {
   "name": "anashi-brain-games",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Set of simple console games",
   "keywords": [
     "game",
@@ -26,7 +26,8 @@
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
-    "brain-gcd": "dist/bin/brain-gcd.js"
+    "brain-gcd": "dist/bin/brain-gcd.js",
+    "brain-progression": "dist/bin/brain-progression.js"
   },
   "files": [
     "dist"
