@@ -1,15 +1,12 @@
 import { getRandomNumber } from '../utils';
-import { makeGameData } from './game-data';
-import { playGame } from '..';
+import { playGame, makeGameData } from '..';
 
-const rules = 'Find the greatest common divisor of given numbers.\n';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (number1, number2) => {
   if (number1 === number2) {
     return number1;
   }
-
-  const gcd = number1 < number2 ? number1 : number2;
 
   const iter = (divisor) => {
     if (divisor === 1) {
@@ -23,7 +20,7 @@ const getGcd = (number1, number2) => {
     return iter(divisor - 1);
   };
 
-  return iter(gcd);
+  return iter(Math.min(number1, number2));
 };
 
 const getGameData = () => {
@@ -37,5 +34,5 @@ const getGameData = () => {
 };
 
 export default () => {
-  playGame(rules, getGameData);
+  playGame(description, getGameData);
 };

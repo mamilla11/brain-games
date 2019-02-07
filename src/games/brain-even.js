@@ -1,8 +1,7 @@
 import { getRandomNumber } from '../utils';
-import { makeGameData } from './game-data';
-import { playGame } from '..';
+import { playGame, makeGameData } from '..';
 
-const rules = 'Answer "yes" if number even otherwise answer "no".\n';
+const description = 'Answer "yes" if number even otherwise answer "no".';
 
 const isEven = number => number % 2 === 0;
 
@@ -14,5 +13,5 @@ const getGameData = () => {
 };
 
 export default () => {
-  playGame(rules, getGameData);
+  playGame(description, getGameData);
 };

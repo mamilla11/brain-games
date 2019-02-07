@@ -1,32 +1,24 @@
 import { getRandomNumber } from '../utils';
-import { makeGameData } from './game-data';
-import { playGame } from '..';
+import { playGame, makeGameData } from '..';
 
-const rules = 'What number is missing in the progression?\n';
+const description = 'What number is missing in the progression?';
+const progressionLength = 10;
 
 const getGameData = () => {
-  const progressionLength = 10;
-  const secretNumber = getRandomNumber(1, progressionLength);
-  const progressionStep = getRandomNumber(2, 10);
+  const hiddenNumberIndex = getRandomNumber(0, progressionLength - 1);
+  const step = getRandomNumber(2, 10);
+  const startNumber = getRandomNumber(1, 100);
 
+  const answer = startNumber + step * hiddenNumberIndex;
   let question = '';
-  let answer;
-  let nextNumber = getRandomNumber(1, 100);
 
-  for (let i = 1; i <= progressionLength; i += 1) {
-    if (i !== secretNumber) {
-      question += `${nextNumber} `;
-    } else {
-      question += '.. ';
-      answer = `${nextNumber}`;
-    }
-
-    nextNumber += progressionStep;
+  for (let i = 0; i < progressionLength; i += 1) {
+    question += (i === hiddenNumberIndex) ? '.. ' : `${startNumber + step * i} `;
   }
 
   return makeGameData(question, answer);
 };
 
 export default () => {
-  playGame(rules, getGameData);
+  playGame(description, getGameData);
 };
