@@ -10,3 +10,6 @@
 
 ### brain-gcd.js demo
 [![asciicast](https://asciinema.org/a/CIAvoUxwEkQKkYYaNfLTOJ6P5.svg)](https://asciinema.org/a/CIAvoUxwEkQKkYYaNfLTOJ6P5)
+
+### brain-progression.js demo
+[![asciicast](https://asciinema.org/a/3ctYbNyAhHKT5Wtyjq9rKQjL1.svg)](https://asciinema.org/a/3ctYbNyAhHKT5Wtyjq9rKQjL1)
