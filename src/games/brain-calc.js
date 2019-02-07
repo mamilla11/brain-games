@@ -1,9 +1,10 @@
 import { getRandomNumber } from '../utils';
 import { makeGameData } from './game-data';
+import { playGame } from '..';
 
-export const getRules = () => 'What is the result of the expression?\n';
+const rules = 'What is the result of the expression?\n';
 
-export const getGameData = () => () => {
+const getGameData = () => {
   const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 100);
 
@@ -29,4 +30,6 @@ export const getGameData = () => () => {
   return makeGameData(question, `${answer}`);
 };
 
-export default getRules;
+export default () => {
+  playGame(rules, getGameData);
+};

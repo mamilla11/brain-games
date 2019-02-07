@@ -1,26 +1,8 @@
-import * as brainEven from './games/brain-even';
-import * as brainCalc from './games/brain-calc';
 import * as game from './games/game-base';
 
-export default (gameName) => {
-  let gameRules;
-  let getGameData;
-
-  switch (gameName) {
-    case 'brain-even':
-      gameRules = brainEven.getRules();
-      getGameData = brainEven.getGameData();
-      break;
-    case 'brain-calc':
-      gameRules = brainCalc.getRules();
-      getGameData = brainCalc.getGameData();
-      break;
-    default:
-      break;
-  }
-
+export const playGame = (rules, getGameData) => {
   game.greeting();
-  game.showRules(gameRules);
+  game.showRules(rules);
 
   const username = game.askName();
 
@@ -40,3 +22,5 @@ export default (gameName) => {
 
   game.finishGame(isWinner, username);
 };
+
+export default playGame;
