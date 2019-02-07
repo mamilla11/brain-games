@@ -7,3 +7,6 @@
 
 ### brain-cacl.js demo
 [![asciicast](https://asciinema.org/a/YRVsIUWtycPXUCckr3zcQBkUr.svg)](https://asciinema.org/a/YRVsIUWtycPXUCckr3zcQBkUr)
+
+### brain-gcd.js demo
+[![asciicast](https://asciinema.org/a/CIAvoUxwEkQKkYYaNfLTOJ6P5.svg)](https://asciinema.org/a/CIAvoUxwEkQKkYYaNfLTOJ6P5)
