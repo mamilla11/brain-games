@@ -9,14 +9,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mamilla11/project-lvl1-s438.git"
+    "url": "git+https://github.com/mamilla11/brain-games.git"
   },
   "author": "anashi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mamilla11/project-lvl1-s438/issues"
+    "url": "https://github.com/mamilla11/brain-games/issues"
   },
-  "homepage": "https://github.com/mamilla11/project-lvl1-s438#readme",
+  "homepage": "https://github.com/mamilla11/brain-games#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
