@@ -3,6 +3,16 @@ import { cons, car, cdr } from 'hexlet-pairs';
 
 const winnerScore = 3;
 
+const greeting = () => {
+  console.log('Welcome to the Brain Games!');
+};
+
+const askName = () => {
+  const username = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${username}!\n`);
+  return username;
+};
+
 const getQuestion = gameData => car(gameData);
 
 const getAnswer = gameData => cdr(gameData);
@@ -27,16 +37,6 @@ const finishGame = (success, username) => {
 };
 
 export const makeGameData = (question, answer) => cons(question, answer);
-
-export const greeting = () => {
-  console.log('Welcome to the Brain Games!');
-};
-
-export const askName = () => {
-  const username = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${username}!\n`);
-  return username;
-};
 
 export const playGame = (description, getGameData) => {
   greeting();
